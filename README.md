@@ -132,4 +132,4 @@ pip install opencv-python mediapipe scikit-learn tensorflow numpy jupyter pyttsx
 
 # Fire it up!
 
-python Hybrid_inference_classifier.py
+click *run all* Hybrid_inference_classifier.ipynb file 
