@@ -1,135 +1,121 @@
-# 🤟 SignSense: Talking with Your Hands, Literally!
+# 🤟 SignSense
 
-> An AI-powered magic mirror that translates hand gestures into text in real-time. We mashed up static and motion recognition so you can sign full sentences on the fly!
-
----
-
-## 📌 What's the Big Idea?
-
-Ever wished your webcam could understand sign language? Meet **SignSense**! We built a real-time translator that watches your hands and types out what you're saying. It uses a "hybrid" AI brain:
-
-- **Static mode:** For the ABCs, 123s, and spaces (striking a pose!).
-
-- **Motion mode:** For whole words that require movement (action!).
-
-Using some slick hand-tracking tech, we made it fast, interactive, and ready to help break down communication barriers.
 
 ---
 
-## ✨ The Cool Stuff
+## 📌 Overview
 
-- ⚡ **Blink-and-you-miss-it Translation:** Real-time gesture-to-text conversion.
+SignSense is a computer vision and machine learning project designed to translate sign language gestures into text in real time. The system combines static hand gesture recognition and dynamic gesture recognition to enable continuous sentence formation from sign language inputs.
 
-- 🧠 **Double-Brained AI:** Hybrid model combining Static + Motion recognition.
-
-- 📝 **Sentence Builder:** Strings your predicted gestures together into actual sentences.
-
-- 🔀 **Shape-Shifting Modes:** Easily toggle between static and motion detection.
-
-- ⌨️ **Oops-Proof Controls:** Interactive commands to clear, backspace, or delete a word when you fumble.
+By leveraging hand landmark tracking, traditional machine learning, and deep learning techniques, SignSense provides an interactive platform for bridging communication gaps and exploring human-computer interaction through sign language recognition.
 
 ---
 
-## 🛠️ Our Geeky Toolbox
+## ✨ Features
 
-| Tool | Superpower |
-
-|------|------------|
-
-| Python | The trusty glue holding it all together |
-
-| OpenCV | The eyes of the operation (Video capture & processing) |
-
-| MediaPipe | The skeletal mapper (Tracking those hand landmarks) |
-
-| Scikit-learn (Random Forest) | The static shape spotter |
-
-| TensorFlow / Keras (LSTM) | The motion pattern psychic |
-
-| NumPy | The ultimate number-crunching ninja |
+- ⚡ Real-time gesture-to-text translation
+- 🧠 Hybrid recognition pipeline (Static + Motion)
+- ✋ Hand landmark detection using MediaPipe
+- 🔤 Recognition of alphabets, numbers, and control gestures
+- 🎬 Dynamic word recognition using temporal sequences
+- 📝 Continuous sentence generation
+- 🔄 Mode switching between static and motion recognition
+- ⌨️ Interactive controls for editing generated text
 
 ---
 
-## ⚙️ Under the Hood
+## 🛠️ Tech Stack
 
-### 🟢 Striking a Pose (Static Gesture Recognition)
-
-- MediaPipe grabs **21 key points** on your hand.
-
-- We crunch those into **42 normalized features** (x, y coordinates).
-
-- Our **Random Forest classifier** plays a lightning-fast game of "guess the letter/number."
-
-### 🔵 Action Sequence (Motion Gesture Recognition)
-
-- We capture mini-movies of **30 frames**.
-
-- Each frame packs those same **42 features**.
-
-- Our **LSTM model** watches the flow to predict dynamic, moving words. It's all about that temporal rhythm!
-
-### 🟣 The Ultimate Mashup (Hybrid System)
-
-- We jammed both brains into a **single smooth pipeline**.
-
-- Manual mode switching keeps the AI from getting confused.
-
-- The final outputs are stitched together to form **meaningful sentences**.
-
-## 🦸‍♂️ Our Super-Suit Upgrades (What we Did)
-
-- Architected the **landmark-based feature extraction pipeline** (wrangling those 42 features per frame).
-
-- Trained the **Random Forest** model for static gestures.
-
-- Built the **LSTM-based sequence model** for motion gestures.
-
-- Engineered the **hybrid inference pipeline** to make both models play nice together.
-
-- Crunched the evaluation metrics to prove it actually works.
-
-- Got my hands dirty creating and prepping the **dataset**.
+| Technology | Purpose |
+|------------|---------|
+| Python | Core development |
+| OpenCV | Video capture and image processing |
+| MediaPipe | Hand landmark detection |
+| Scikit-learn | Static gesture classification |
+| TensorFlow / Keras | LSTM-based motion recognition |
+| NumPy | Data processing and feature engineering |
 
 ---
 
+## ⚙️ Methodology
+
+### 🟢 Static Gesture Recognition
+
+- MediaPipe extracts **21 hand landmarks**.
+- Landmark coordinates are normalized into a **42-dimensional feature vector**.
+- A **Random Forest classifier** predicts static gestures such as alphabets, numbers, and control commands.
+
+### 🔵 Motion Gesture Recognition
+
+- Gesture sequences are captured across **30 consecutive frames**.
+- Each frame contains normalized hand landmark features.
+- An **LSTM network** analyzes temporal patterns to recognize dynamic sign language words.
+
+### 🟣 Hybrid Recognition Pipeline
+
+- Static and motion recognition models operate within a unified framework.
+- Users can switch modes depending on the gesture type.
+- Predictions are combined to generate meaningful text output in real time.
+
 ---
 
-## 🚧 Roadblocks & Next Levels
+## 🚀 Key Contributions
 
-**Current Glitches in the Matrix:**
-
-- We speak ASL right now because ISL datasets are hard to find.
-
-- Moody lighting and different users can sometimes confuse the AI.
-
-**Level Up (Future Work):**
-
-- [ ] Learn Indian Sign Language (ISL) 🇮🇳
-
-- [ ] Beef up the dataset (More hands, more backgrounds!) 📸
-
-- [ ] Take it to the web (Web app incoming!) 🌐
+- Designed the landmark-based feature extraction pipeline.
+- Developed the Random Forest classifier for static gesture recognition.
+- Built the LSTM-based sequence model for dynamic gesture recognition.
+- Integrated both models into a hybrid inference framework.
+- Prepared and processed training datasets.
+- Evaluated system performance using standard classification metrics.
 
 ---
 
+## 🚧 Challenges
+
+- Limited availability of large-scale Indian Sign Language (ISL) datasets.
+- Performance sensitivity to lighting conditions and background variations.
+- Generalization across different users and hand orientations.
+
 ---
 
-## 🚀 DIY Time (How to Run)
+## 📈 Future Enhancements
+
+- 🇮🇳 Support for Indian Sign Language (ISL)
+- 📸 Larger and more diverse datasets
+- 🌐 Web-based deployment
+- 🎙️ Speech synthesis integration
+- 🤖 Improved sentence prediction and language modeling
+- 👤 Enhanced user adaptation and personalization
+
+---
+
+## ▶️ Getting Started
+
+### Clone the Repository
 
 ```bash
-
-# Clone the repository to your machine
-
 git clone https://github.com/shivanshh-oo/SignSense.git
-
-# Jump into the project folder
-
 cd Signsense-main
+```
 
-# Install all the necessary robot brains
+### Install Dependencies
 
+```bash
 pip install opencv-python mediapipe scikit-learn tensorflow numpy jupyter pyttsx3
+```
 
-# Fire it up!
+### Run the Project
 
-click *run all* Hybrid_inference_classifier.ipynb file 
+Open:
+
+```text
+Hybrid_inference_classifier.ipynb
+```
+
+and click **Run All** to start the real-time gesture recognition system.
+
+---
+
+## 🎯 Concepts Demonstrated
+
+`Computer Vision` • `Machine Learning` • `Deep Learning` • `LSTM Networks` • `MediaPipe` • `Real-Time Inference` • `Human-Computer Interaction` • `Sign Language Recognition`
