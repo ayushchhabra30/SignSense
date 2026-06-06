@@ -23,7 +23,24 @@ By leveraging hand landmark tracking, traditional machine learning, and deep lea
 - ⌨️ Interactive controls for editing generated text
 
 ---
+## 📸 Demo
+<table>
+<tr>
+<td align="center">
+<img src="https://github.com/user-attachments/assets/86522bde-991d-4bf6-8971-179c7eb0b952" width="450">
+<br>
+<b>Static Gesture Recognition</b>
+</td>
 
+<td align="center">
+<img src="https://github.com/user-attachments/assets/72dd23f8-6b6b-4863-a4de-b11be5a80b30" width="450">
+<br>
+<b>Motion Gesture Recognition</b>
+</td>
+</tr>
+</table>
+
+---
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
@@ -116,6 +133,3 @@ and click **Run All** to start the real-time gesture recognition system.
 
 ---
 
-## 🎯 Concepts Demonstrated
-
-`Computer Vision` • `Machine Learning` • `Deep Learning` • `LSTM Networks` • `MediaPipe` • `Real-Time Inference` • `Human-Computer Interaction` • `Sign Language Recognition`
